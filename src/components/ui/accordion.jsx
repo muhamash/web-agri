@@ -1,8 +1,7 @@
-import * as React from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 import { ChevronDown } from "lucide-react"
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/src/utils/lib"
 
 const Accordion = AccordionPrimitive.Root
 
@@ -44,4 +43,5 @@ const AccordionContent = (({ className, children, ...props }, ref) => (
 
 AccordionContent.displayName = AccordionPrimitive.Content.displayName
 
-export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
+export { Accordion, AccordionContent, AccordionItem, AccordionTrigger }
+
