@@ -1,3 +1,4 @@
+import Header from "@/src/components/common/Header";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -16,13 +17,16 @@ export const metadata = {
   description: "Agricultural Information Hub that so a comprehensive resource foe farmers and agriculture enthusiasts. The hub will provide farming guides, detailed crop information, pest control strategies, and a means for users to contact agricultural expert for further assistance.",
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
-        {children}
+        <Header/>
+        <div>
+          {children}
+        </div>
       </body>
     </html>
   );
